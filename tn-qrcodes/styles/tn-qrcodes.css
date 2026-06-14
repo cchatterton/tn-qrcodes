@@ -1,0 +1,36 @@
+.tn-qr-box p {
+    margin: 0 0 8px;
+}
+
+.tn-qr-box label {
+    display: block;
+    margin: 0 0 3px;
+    font-size: 11px;
+}
+
+.tn-qr-box input[type="text"] {
+    width: 100%;
+    margin: 0;
+}
+
+.tn-qr-image-wrap {
+    margin: 10px 0 8px;
+    text-align: center;
+}
+
+.tn-qr-image-wrap img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.tn-qr-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.tn-qr-actions .button {
+    flex: 1;
+    text-align: center;
+}
