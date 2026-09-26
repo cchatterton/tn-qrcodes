@@ -16,3 +16,5 @@ rm -rf "$DIST_DIR/$PLUGIN_SLUG/phpqrcode/tools"
 cd "$DIST_DIR"
 rm -f "$PLUGIN_SLUG.zip"
 zip -qr "$PLUGIN_SLUG.zip" "$PLUGIN_SLUG"
+
+cp "$PLUGIN_SLUG.zip" "../$PLUGIN_SLUG.zip"
