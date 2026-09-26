@@ -3,8 +3,8 @@ Contributors:
 Tags: techn
 Requires at least: 7.0
 Tested up to: 7.1.2
-Stable tag: 1.5.1
-Requires PHP: 8.5
+Stable tag: 1.5.2
+Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ Adds QR codes to public post types and allows tracked QR code downloads.
 3. Configure its existing feature settings as usual.
 
 == Changelog ==
+
+= 1.5.2 =
+* Lower the PHP requirement to 7.4 to match WordPress 7.0; update the controller installation compatibility check.
 
 = 1.5.1 =
 * Replace the independent updater with TN Update Controller integration.

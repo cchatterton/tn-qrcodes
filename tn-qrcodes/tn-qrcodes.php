@@ -2,9 +2,9 @@
 /**
  * Plugin Name: TN QR Codes
  * Description: Adds QR codes to public post types and allows tracked QR code downloads.
- * Version: 1.5.1
+ * Version: 1.5.2
  * Requires at least: 7.0
- * Requires PHP: 8.5
+ * Requires PHP: 7.4
  * Author: Techn
  * Author URI: https://techn.com.au
  * Update URI: https://github.com/cchatterton/tn-qrcodes
@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('TN_QR_VERSION', '1.5.1');
+define('TN_QR_VERSION', '1.5.2');
 define('TN_QR_PLUGIN_FILE', __FILE__);
 define('TN_QR_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('TN_QR_PLUGIN_URL', plugin_dir_url(__FILE__));
