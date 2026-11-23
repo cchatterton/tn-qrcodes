@@ -34,3 +34,29 @@
     flex: 1;
     text-align: center;
 }
+
+.tn-qr-extra-row {
+    margin-bottom: 6px;
+}
+
+.tn-qr-extra-row input {
+    width: min(210px, 30%);
+}
+
+.tn-qr-links .widefat td {
+    vertical-align: top;
+}
+
+.tn-qr-list-image {
+    width: 96px;
+    height: 96px;
+}
+
+.tn-qr-long-url {
+    max-width: 360px;
+    overflow-wrap: anywhere;
+}
+
+.tn-qr-new-row {
+    background: #edfaef !important;
+}

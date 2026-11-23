@@ -2,6 +2,12 @@
 
 All notable changes to TN QR Codes are recorded here.
 
+## 1.6.0 - 2026-11-23
+
+- Add Tools > Trackable QR Codes for arbitrary URLs, six UTM fields, and repeatable query parameters.
+- Save stable tracking links and QR images, and count each redirect atomically.
+- Show saved codes, visit counts, and PNG downloads in the Tools page.
+
 ## 1.5.2 - 2026-09-26
 
 - Lower the PHP requirement to 7.4, matching WordPress 7.0.

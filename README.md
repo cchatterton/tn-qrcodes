@@ -1,6 +1,6 @@
 # TN QR Codes
 
-TN QR Codes adds QR codes to public WordPress post types and allows admins to download QR codes with optional UTM tracking values.
+TN QR Codes adds QR codes to public WordPress post types. It also adds Tools > Trackable QR Codes, where administrators can create a QR code for any HTTP or HTTPS URL, set UTM values and additional query parameters, download the image, and see its visit count. Each scan passes through a site URL that increments the count and redirects to the saved destination.
 
 ## Release
 
