@@ -75,11 +75,11 @@ function tn_qr_link_destination($url, $input) {
         $query[$key] = isset($values[$index]) ? sanitize_text_field(wp_unslash($values[$index])) : '';
     }
 
-    foreach (['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'] as $key) {
+    foreach (['utm_source', 'utm_medium', 'utm_campaign'] as $key) {
         if (isset($input[$key]) && !is_string($input[$key])) {
             return new WP_Error('invalid_utm', 'Enter text values for UTM parameters.');
         }
-        $value = isset($input[$key]) ? trim(sanitize_text_field(wp_unslash($input[$key]))) : '';
+        $value = isset($input[$key]) ? trim(sanitize_text_field(wp_unslash($input[$key]))) : ($key === 'utm_medium' ? 'trackable-qr' : '');
         if ($value !== '') {
             $query[$key] = $value;
         }
@@ -200,8 +200,9 @@ function tn_qr_render_links_page() {
     wp_nonce_field('tn_qr_create_link');
     echo '<table class="form-table" role="presentation"><tbody>';
     echo '<tr><th><label for="tn-qr-destination">Destination URL</label></th><td><input class="regular-text" type="url" id="tn-qr-destination" name="destination" required placeholder="https://example.com/page"><p class="description">Existing query parameters are preserved.</p></td></tr>';
-    foreach (['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'utm_id'] as $field) {
-        echo '<tr><th><label for="tn-qr-' . esc_attr($field) . '">' . esc_html($field) . '</label></th><td><input class="regular-text" type="text" id="tn-qr-' . esc_attr($field) . '" name="' . esc_attr($field) . '"></td></tr>';
+    foreach (['utm_source', 'utm_medium', 'utm_campaign'] as $field) {
+        $default = $field === 'utm_medium' ? 'trackable-qr' : '';
+        echo '<tr><th><label for="tn-qr-' . esc_attr($field) . '">' . esc_html($field) . '</label></th><td><input class="regular-text" type="text" id="tn-qr-' . esc_attr($field) . '" name="' . esc_attr($field) . '" value="' . esc_attr($default) . '"></td></tr>';
     }
     echo '<tr><th>Other query parameters</th><td><div id="tn-qr-extra-fields"><div class="tn-qr-extra-row"><input type="text" name="extra_key[]" placeholder="Parameter name" aria-label="Parameter name"> <input type="text" name="extra_value[]" placeholder="Value" aria-label="Parameter value"> <button type="button" class="button tn-qr-remove-extra">Remove</button></div></div><button type="button" class="button" id="tn-qr-add-extra">Add parameter</button><p class="description">Up to 20 additional parameters. A matching name replaces a value already in the URL.</p></td></tr>';
     echo '</tbody></table>';

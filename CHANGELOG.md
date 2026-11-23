@@ -2,6 +2,11 @@
 
 All notable changes to TN QR Codes are recorded here.
 
+## 1.6.1 - 2026-11-23
+
+- Keep dedicated inputs for `utm_source`, `utm_medium`, and `utm_campaign` on the trackable QR creator.
+- Default `utm_medium` to `trackable-qr` for new codes.
+
 ## 1.6.0 - 2026-11-23
 
 - Add Tools > Trackable QR Codes for arbitrary URLs, six UTM fields, and repeatable query parameters.

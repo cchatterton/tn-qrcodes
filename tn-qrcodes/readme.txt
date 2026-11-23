@@ -3,7 +3,7 @@ Contributors:
 Tags: techn
 Requires at least: 7.0
 Tested up to: 7.1.2
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,10 @@ Adds QR codes to public post types. Under Tools > Trackable QR Codes, administra
 3. Configure its existing feature settings as usual.
 
 == Changelog ==
+
+= 1.6.1 =
+* Keep source, medium, and campaign as the dedicated UTM inputs.
+* Default the medium to trackable-qr for new trackable QR codes.
 
 = 1.6.0 =
 * Add Tools > Trackable QR Codes with UTM and repeatable query parameters.
